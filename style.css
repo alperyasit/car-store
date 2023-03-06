@@ -1,7 +1,6 @@
 * {
     font-size: 1rem;
     margin: 0;
-    font-weight: bold;
     font-family: Tahoma, Verdana, sans-serif;
     word-spacing: 0.3rem;
 }
@@ -10,12 +9,15 @@
     text-align: left;
     margin: 0.3rem;
     margin-left: 0.5rem;
-
 }
 
 #bar {
     display: flex;
     flex-direction: column;
+}
+
+table {
+    border-spacing: 0px;
 }
 
 input {
@@ -25,8 +27,6 @@ input {
     border: 1px solid gray;
     margin-top: 0.3rem;
     margin-left: 0.5rem;
-
-
 }
 
 .add-car {
@@ -38,12 +38,6 @@ input {
     border-radius: 5px;
     margin-left: 0.5rem;
     cursor: pointer;
-
-}
-
-.add-car:hover {
-    background-color: aliceblue;
-    transition: 1;
 }
 
 .solid2 {
@@ -51,10 +45,17 @@ input {
     width: 100%;
 }
 
-
+.add-car:hover {
+    background-color: aliceblue;
+    transition: 5ms;
+}
 
 .car-list {
-    padding-top: 0.5rem;
     margin-left: 0.5rem;
+}
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
 
 }
