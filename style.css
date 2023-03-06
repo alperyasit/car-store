@@ -1,0 +1,27 @@
+* {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: bold;
+    font-family: Tahoma, Verdana, sans-serif;
+    word-spacing: 0.3rem;
+}
+
+#bar {
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    width: 15rem;
+    padding: 0.1rem;
+    margin: 0.1rem;
+    border: 1px solid gray ;
+}
+
+.add-car{
+    width: 15rem;
+    text-align: center;
+    background-color: rgb(231, 231, 231);
+    border: 2px solid rgb(75, 33, 33) ;
+    border-radius: 5px;
+}
