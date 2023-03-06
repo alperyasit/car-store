@@ -4,11 +4,15 @@
     font-family: Tahoma, Verdana, sans-serif;
     word-spacing: 0.3rem;
 }
-
+  
 .baslik {
     text-align: left;
-    margin: 0.3rem;
-    margin-left: 0.5rem;
+    width: 100%;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid black;
 }
 
 #bar {
@@ -16,8 +20,8 @@
     flex-direction: column;
 }
 
-table {
-    border-spacing: 0px;
+.cars {
+    margin: 10px;
 }
 
 input {
@@ -54,8 +58,59 @@ input {
     margin-left: 0.5rem;
 }
 
-table{
+table {
     border: 1px solid black;
     border-collapse: collapse;
+    width: 100%;
+    height: 75%;
+}
 
+table thead tr {
+    color: white;
+    background-color: black;
+    width: 100%;
+    height: 50px;
+}
+
+table,
+tbody,
+thead {
+    border: 2px solid black;
+}
+
+table tbody tr td:last-child {
+    font-size: 16px;
+    text-align: center;
+}
+
+table tbody tr td {
+    border: 1px solid red;
+    padding: 10px;
+}
+
+table tbody tr td:first-child {
+    font-size: 16px;
+    width: 200px;
+}
+
+table thead tr th:first-child {
+    font-size: 16px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+th {
+    font-weight: 300;
+
+}
+
+img {
+    width: 200px;
+    word-break: break-word;
+}
+
+.black {
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid grey;
 }
