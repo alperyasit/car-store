@@ -21,3 +21,22 @@ UI.prototype.clearInputs = function(element1,element2,element3){
 
 }
 
+UI.prototype.displayMessages = function(message,type){
+const cardBody = document.querySelector(".car-list");
+const form = document.getElementById("car-form");
+
+// Alert Divi
+
+const div = document.createElement("div");
+
+div.className = `alert alert-${type}`;
+div.textContent = message;
+form.parentNode.insertBefore(div, form.nextSibling);
+//cardBody.appendChild(div);
+
+setTimeout(function(){
+  div.style.opacity = 0;
+  div.remove();
+
+},2000);
+}
