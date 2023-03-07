@@ -22,7 +22,8 @@ function addCar(e) {
 
   if (title === "" || price === "" || url === "") {
     //hata
-  } else {
+  }
+   else {
     // Yeni Araç
     const newCar = new Car(title, price, url);
 
