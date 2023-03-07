@@ -4,7 +4,7 @@
     font-family: Tahoma, Verdana, sans-serif;
     word-spacing: 0.3rem;
 }
-  
+
 .baslik {
     text-align: left;
     width: 100%;
@@ -35,13 +35,14 @@ input {
 
 .add-car {
     margin-top: 0.2rem;
-    width: 15rem;
+    width: 15%;
     text-align: center;
-    background-color: rgba(255, 0, 0, 0.918);
-    border: 2px solid rgb(148, 140, 140);
-    border-radius: 5px;
+    background-color: rgba(146, 86, 86, 0.918);
+    border: 1px solid rgb(37, 34, 34);
+    border-radius: 2px;
     margin-left: 0.5rem;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .solid2 {
@@ -51,7 +52,7 @@ input {
 
 .add-car:hover {
     background-color: aliceblue;
-    transition: 5ms;
+    transition: 0.5s;
 }
 
 .car-list {
@@ -84,7 +85,7 @@ table tbody tr td:last-child {
 }
 
 table tbody tr td {
-    border: 1px solid red;
+    border: 1px solid black;
     padding: 10px;
 }
 
@@ -110,7 +111,17 @@ img {
 }
 
 .black {
+    background-color: rgba(146, 86, 86, 0.918);
     margin-top: 10px;
-    border-radius: 5px;
+    border-radius: 1px;
     border: 1px solid grey;
+    width: 13%;
+    text-align: center;
+    word-spacing: 1px;
+    cursor: pointer;
+}
+
+.black:hover{
+    transition: 0.5s;
+    background-color: aliceblue;
 }
