@@ -15,7 +15,7 @@
     border: 1px solid black;
 }
 
-#bar {
+#car-form {
     display: flex;
     flex-direction: column;
 }
