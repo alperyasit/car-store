@@ -7,7 +7,7 @@ const urlElement = document.querySelector("#url");
 
 const ui = new UI();
 
-/* const storage = new storage() */     //İLK ADım//
+const storage = new Storage();
 
 //  Tüm Eventleri Yükleme
 
@@ -28,8 +28,7 @@ function addCar(e) {
     // Yeni Araç
     const newCar = new Car(title, price, url);
     ui.addCarToUI(newCar);
-    /*Storage.addCarToStorage(newCar); */ //İKİNCİ ADIM//
-
+    storage.addCarToStorage(newCar);
     ui.displayMessages("Araç Başarı İle Eklendi", "success", "alert-success");
     // Arayüze Araç Ekleme
   }
@@ -46,4 +45,12 @@ function deleteCar(e) {
 const carList = document.getElementById("cars-card");
 carList.addEventListener("click", deleteCar);
 
+// function deleteCar(e) {
+//     if (e.target.id === "delete-car") {
+//       e.target.parentElement.parentElement.remove();
+//       alert("Araç başarıyla silindi.");
+//     }
+//   }
 
+//   const carList = document.getElementById("cars-card");
+// carList.addEventListener("click", deleteCar);
