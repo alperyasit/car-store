@@ -7,6 +7,8 @@ const urlElement = document.querySelector("#url");
 
 const ui = new UI();
 
+/* const storage = new storage() */     //İLK ADım//
+
 //  Tüm Eventleri Yükleme
 
 eventListeners();
@@ -21,12 +23,35 @@ function addCar(e) {
   const url = urlElement.value;
   e.preventDefault();
   if (title === "" || price === "" || url === "") {
-    //hata
+    ui.displayMessages("Tüm Alanları Doldurun...", "danger", "alert-danger");
   } else {
     // Yeni Araç
     const newCar = new Car(title, price, url);
     ui.addCarToUI(newCar);
+    /*Storage.addCarToStorage(newCar); */ //İKİNCİ ADIM//
+
+    ui.displayMessages("Araç Başarı İle Eklendi", "success", "alert-success");
     // Arayüze Araç Ekleme
   }
-  ui.clearInputs(titleElement,urlElement,priceElement);
+  ui.clearInputs(titleElement, urlElement, priceElement);
 }
+
+function deleteCar(e) {
+  if (e.target.id === "delete-car") {
+    e.target.parentElement.parentElement.remove();
+    alert("Araç Başarı İle Silindi :(");
+  }
+}
+
+const carList = document.getElementById("cars-card");
+carList.addEventListener("click", deleteCar);
+
+// function deleteCar(e) {
+//     if (e.target.id === "delete-car") {
+//       e.target.parentElement.parentElement.remove();
+//       alert("Araç başarıyla silindi.");
+//     }
+//   }
+
+//   const carList = document.getElementById("cars-card");
+// carList.addEventListener("click", deleteCar);
