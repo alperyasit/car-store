@@ -23,10 +23,8 @@
   
           <input type="text" id="url" placeholder="Car Image Link" />
         </div>
+          <button type="submit" class="add-car">Add Car</button>
         </form>
-
-
-      <button class="add-car">Add Car</button>
     </div>
 
     <hr class="solid2" />
@@ -44,11 +42,12 @@
             <th>Cars Image</th>
             <th>Cars Features</th>
             <th>Price Info</th>
+            <th>*</th>
           </tr>
         </thead>
 
-        <tbody>
-          <tr>
+        <tbody id="cars-card" class="cars-card">
+  <!--    <tr>
             <td>
               <img
                 class="first-img"
@@ -62,7 +61,6 @@
             </td>
             <td>500.000$</td>
           </tr>
-          <!--  -->
           <tr>
             <td>
               <img
@@ -78,7 +76,6 @@
             <td>850.000$</td>
           </tr>
 
-          <!--  -->
           <tr>
             <td class="third-img">
               <img
@@ -93,7 +90,6 @@
             </td>
             <td>1.000.000$</td>
           </tr>
-          <!--  -->
           <tr>
             <td>
               <img
@@ -109,13 +105,13 @@
             <td>350.000$</td>
           </tr>
         </tbody>
+      -->        
       </table>
 
       <button class="black">Clear All Cars</button>
     </div>
     <script src="car.js"></script>
-    <script src="uı.js"></script> 
-    <script src="stroage.js"></script>   
+    <script src="ui.js"></script> 
 
     <script src="project.js"></script>
   </body>
