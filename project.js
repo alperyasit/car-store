@@ -19,14 +19,14 @@ function addCar(e) {
   const title = titleElement.value;
   const price = priceElement.value;
   const url = urlElement.value;
-
+  e.preventDefault();
   if (title === "" || price === "" || url === "") {
     //hata
-  }
-   else {
+  } else {
     // Yeni Araç
     const newCar = new Car(title, price, url);
-
-    ui.addCarToUI(newCar); // Arayüze Araç Ekleme
+    ui.addCarToUI(newCar);
+    // Arayüze Araç Ekleme
   }
+  ui.clearInputs(titleElement,urlElement,priceElement);
 }
