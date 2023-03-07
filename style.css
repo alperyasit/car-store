@@ -110,12 +110,32 @@ img {
     word-break: break-word;
 }
 
+#delete-car{
+    color: black;
+    background-color: rgba(146, 86, 86, 0.918);
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 6px;
+    width: 25px;
+    margin: 0;
+    text-align: center;
+}
+
+#delete-car:hover{
+    background-color: aliceblue;
+    transition: 0.5s;
+
+
+}
+
 .black {
     background-color: rgba(146, 86, 86, 0.918);
     margin-top: 10px;
     border-radius: 1px;
     border: 1px solid grey;
-    width: 13%;
+    width: 15%;
     text-align: center;
     word-spacing: 1px;
     cursor: pointer;
