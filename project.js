@@ -3,7 +3,7 @@ const titleElement = document.querySelector("#title");
 const priceElement = document.querySelector("#price");
 const urlElement = document.querySelector("#url");
 const cardBody = document.getElementById("#footer");
-
+const clear = document.getElementById("black")
 
 //  UI Objesi Açma
 
@@ -22,6 +22,8 @@ function eventListeners() {
     let cars = storage.getCarsFromStorage();
 
     ui.loadAllCars(cars);
+
+    clear.addEventListener("click", clearAllCars);
   
   /*cardBody.addEventListener("click",deleteCar);*/ //Kaldırıldı
 
@@ -61,5 +63,13 @@ carList.addEventListener("click", deleteCar);
 function deleteCar(e){
   if(e.target.id === "delete-car"){
       ui.deleteCarFromUI(e.target);
+    storage.deleteCarFromStorage(e.target.parentElement.previousElementSibling.previousElementSibling.textContent)
+    ui.displayMessages("Silme Başarılı","success");
   }  
+}
+
+function clearAllCars(){
+  console.log("fjkdsfhjkds");
+  ui.clearAllCarsFromUI();
+  storage.clearAllCarsFromStorage();
 }
