@@ -130,7 +130,7 @@ img {
 
 }
 
-.black {
+#black {
     background-color: rgba(146, 86, 86, 0.918);
     margin-top: 10px;
     border-radius: 1px;
@@ -167,6 +167,7 @@ img {
   margin-top: 10px;
   border-radius: 5px;
 }
+
 
 
   
