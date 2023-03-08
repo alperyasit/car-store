@@ -15,6 +15,12 @@ eventListeners();
 
 function eventListeners() {
   form.addEventListener("submit", addCar);
+
+  document.addEventListener("DOMContentLoaded", function () {
+    let cars = storage.getCarsFromStorage();
+
+    ui.loadAllCars(cars);
+  });
 }
 
 function addCar(e) {
@@ -44,13 +50,3 @@ function deleteCar(e) {
 
 const carList = document.getElementById("cars-card");
 carList.addEventListener("click", deleteCar);
-
-// function deleteCar(e) {
-//     if (e.target.id === "delete-car") {
-//       e.target.parentElement.parentElement.remove();
-//       alert("Araç başarıyla silindi.");
-//     }
-//   }
-
-//   const carList = document.getElementById("cars-card");
-// carList.addEventListener("click", deleteCar);
