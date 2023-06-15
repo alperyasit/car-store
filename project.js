@@ -3,7 +3,7 @@ const titleElement = document.querySelector("#title");
 const priceElement = document.querySelector("#price");
 const urlElement = document.querySelector("#url");
 const cardBody = document.getElementById("#footer");
-const clear = document.getElementById("black")
+const clear = document.getElementById("black");
 
 //  UI Objesi Açma
 
@@ -24,11 +24,9 @@ function eventListeners() {
     ui.loadAllCars(cars);
 
     clear.addEventListener("click", clearAllCars);
-  
-  /*cardBody.addEventListener("click",deleteCar);*/ //Kaldırıldı
 
+    /*cardBody.addEventListener("click",deleteCar);*/ //Kaldırıldı
   });
-
 }
 
 function addCar(e) {
@@ -37,13 +35,17 @@ function addCar(e) {
   const url = urlElement.value;
   e.preventDefault();
   if (title === "" || price === "" || url === "") {
-    ui.displayMessages("Tüm Alanları Doldurun...", "danger", "alert-danger");
+    ui.displayMessages("Please fill in all fields.", "danger", "alert-danger");
   } else {
     // Yeni Araç
     const newCar = new Car(title, price, url);
     ui.addCarToUI(newCar);
     storage.addCarToStorage(newCar);
-    ui.displayMessages("Araç Başarı İle Eklendi", "success", "alert-success");
+    ui.displayMessages(
+      "The Car Successfully Added",
+      "success",
+      "alert-success"
+    );
     // Arayüze Araç Ekleme
   }
   ui.clearInputs(titleElement, urlElement, priceElement);
@@ -59,16 +61,18 @@ function deleteCar(e) {
 const carList = document.getElementById("cars-card");
 carList.addEventListener("click", deleteCar);
 
-
-function deleteCar(e){
-  if(e.target.id === "delete-car"){
-      ui.deleteCarFromUI(e.target);
-    storage.deleteCarFromStorage(e.target.parentElement.previousElementSibling.previousElementSibling.textContent)
-    ui.displayMessages("Silme Başarılı","success");
-  }  
+function deleteCar(e) {
+  if (e.target.id === "delete-car") {
+    ui.deleteCarFromUI(e.target);
+    storage.deleteCarFromStorage(
+      e.target.parentElement.previousElementSibling.previousElementSibling
+        .textContent
+    );
+    ui.displayMessages("Silme Başarılı", "success");
+  }
 }
 
-function clearAllCars(){
+function clearAllCars() {
   console.log("fjkdsfhjkds");
   ui.clearAllCarsFromUI();
   storage.clearAllCarsFromStorage();
